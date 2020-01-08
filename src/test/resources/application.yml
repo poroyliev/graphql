@@ -1,0 +1,5 @@
+graphql:
+  servlet:
+    tracing-enabled: true
+    websocket:
+      enabled: false
