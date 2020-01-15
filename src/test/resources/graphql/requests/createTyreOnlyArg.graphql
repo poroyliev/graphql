@@ -1,0 +1,5 @@
+mutation CreateTyre($tyre: TyreInput){
+    createTyreOnlyArg(tyre: $tyre) {
+        id
+    }
+}

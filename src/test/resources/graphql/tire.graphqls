@@ -1,0 +1,33 @@
+type Tyre {
+    id: ID!,
+    vehicleId: Int! @negative
+    brand: String
+}
+
+extend type Subscription {
+    hello(count: Int): String
+}
+
+scalar Date
+scalar Long
+
+input TyreInput {
+    vehicleId: Int
+    brand: String
+}
+
+extend type Mutation {
+    createTyreLastArg(str: String, tyre: TyreInput):Tyre
+    createTyreOnlyArg(tyre: TyreInput):Tyre
+    createTyreFirstArg(tyre: TyreInput, str: String):Tyre
+    createTyre(tyre: TyreInput):Tyre
+    flatTyre: Tyre
+}
+
+interface ITest {
+    me: String
+}
+
+directive @negative(message : String = "graphql.validation.Negative.message")
+on ARGUMENT_DEFINITION | FIELD_DEFINITION | INPUT_FIELD_DEFINITION
+

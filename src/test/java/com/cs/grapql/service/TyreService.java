@@ -1,7 +1,7 @@
-package com.cs.service;
+package com.cs.grapql.service;
 
-import com.cs.model.Tyre;
-import com.cs.repository.TyreRepository;
+import com.cs.grapql.model.Tyre;
+import com.cs.grapql.repository.TyreRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,7 +20,7 @@ public class TyreService {
         return this.tyreRepository.save(tyre);
     }
 
-    public List<Tyre> getTyres(long vehicleId) {
+    public List<Tyre> getTyres(Integer vehicleId) {
         return tyreRepository.findByVehicleId(vehicleId);
     }
 }

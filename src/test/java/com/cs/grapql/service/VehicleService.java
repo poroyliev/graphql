@@ -1,7 +1,7 @@
-package com.cs.service;
+package com.cs.grapql.service;
 
-import com.cs.model.Vehicle;
-import com.cs.repository.VehicleRepository;
+import com.cs.grapql.model.Vehicle;
+import com.cs.grapql.repository.VehicleRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

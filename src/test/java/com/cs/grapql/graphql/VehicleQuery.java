@@ -1,8 +1,8 @@
-package com.cs.graphql;
+package com.cs.grapql.graphql;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.cs.model.Vehicle;
-import com.cs.service.VehicleService;
+import com.cs.grapql.model.Vehicle;
+import com.cs.grapql.service.VehicleService;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

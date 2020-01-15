@@ -1,5 +1,9 @@
 graphql:
   servlet:
     tracing-enabled: true
-    websocket:
-      enabled: false
+
+spring:
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate.ddl-auto: create-drop

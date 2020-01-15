@@ -3,13 +3,16 @@ type Vehicle {
     type: String,
     modelCode: String,
     brandName: String,
-    launchDate: String,
-    tyres: [Tyre]
+    launchDate: String
 }
 
 type Query {
     vehicles(count: Int):[Vehicle]
     vehicle(id: ID):Vehicle
+}
+
+type Subscription {
+
 }
 
 type Mutation {

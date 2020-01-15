@@ -1,0 +1,5 @@
+mutation CreateTyre($str: String, $tyre: TyreInput){
+    createTyreLastArg(str: $str, tyre: $tyre) {
+        id
+    }
+}

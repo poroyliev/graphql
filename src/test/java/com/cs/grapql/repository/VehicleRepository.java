@@ -1,6 +1,6 @@
-package com.cs.repository;
+package com.cs.grapql.repository;
 
-import com.cs.model.Vehicle;
+import com.cs.grapql.model.Vehicle;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

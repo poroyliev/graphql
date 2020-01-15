@@ -23,14 +23,9 @@ graphiql:
     enabled: true
     version: 0.17.5
   props:
-#    resources:
-#      query: query.graphql
-#      defaultQuery: defaultQuery.graphql
-#      variables: variables.graphql
     variables:
       editorTheme: "solarized light"
-#  headers:
-#    Authorization: "Bearer <your-token>"
+
 
 altair:
   mapping: /altair
@@ -47,12 +42,6 @@ altair:
   cdn:
     enabled: true
     version: 2.1.7
-#  props:
-#    resources:
-#      defaultQuery: defaultQuery.graphql
-#      variables: variables.graphql
-#  headers:
-#    Authorization: "Bearer <your-token>"
 
 graphql.playground:
   mapping: /playground
@@ -80,14 +69,8 @@ graphql.playground:
     schema.polling.interval: 2000
     schema.disableComments: true
     tracing.hideTracingResponse: true
-#  headers:
-#    headerFor: AllTabs
-#  tabs:
-#    - name: Example Tab
-#      query: classpath:exampleQuery.graphql
-#      headers:
-#        SomeHeader: Some value
-#      variables: classpath:variables.json
-#      responses:
-#        - classpath:exampleResponse1.json
-#        - classpath:exampleResponse2.json
+
+logging:
+  level:
+    com.cs.grapql: DEBUG
+    root: ERROR

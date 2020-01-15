@@ -1,0 +1,6 @@
+mutation CreateVehicle($tyre: TyreInput){
+    createTyre(tyre: $tyre) {
+        id
+        vehicleId
+    }
+}

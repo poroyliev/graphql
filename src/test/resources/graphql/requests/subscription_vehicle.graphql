@@ -1,0 +1,3 @@
+subscription Test($count: Int){
+    hello(count:$count)
+}
