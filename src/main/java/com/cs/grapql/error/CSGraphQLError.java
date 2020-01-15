@@ -5,7 +5,6 @@ import graphql.GraphQLError;
 import graphql.language.SourceLocation;
 
 import java.util.List;
-import java.util.Map;
 
 public class CSGraphQLError extends RuntimeException implements GraphQLError {
 

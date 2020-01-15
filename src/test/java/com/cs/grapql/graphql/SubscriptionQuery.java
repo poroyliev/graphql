@@ -9,7 +9,6 @@ import reactor.core.publisher.Flux;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
-import java.util.concurrent.ThreadLocalRandom;
 
 @Component
 public class SubscriptionQuery implements GraphQLSubscriptionResolver {

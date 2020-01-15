@@ -11,15 +11,18 @@ import org.testcontainers.containers.MySQLContainer;
 @ContextConfiguration(initializers = {CSAbstractIntegrationTest.Initializer.class})
 public class CSAbstractIntegrationTest {
 
+    private static MySQLContainer<?> mySQLContainer;
+
     static class Initializer implements ApplicationContextInitializer<ConfigurableApplicationContext> {
         public void initialize(ConfigurableApplicationContext configurableApplicationContext) {
 
-            MySQLContainer mySQLContainer = new MySQLContainer("mysql:8")
+            MySQLContainer<?> mySQLContainer = new MySQLContainer<>("mysql:8")
                     .withDatabaseName("integration-tests-db")
                     .withUsername("sa")
                     .withPassword("sa");
 
             mySQLContainer.start();
+            CSAbstractIntegrationTest.mySQLContainer = mySQLContainer;
 
             TestPropertyValues.of(
                     "spring.datasource.url=" + mySQLContainer.getJdbcUrl(),
@@ -29,4 +32,7 @@ public class CSAbstractIntegrationTest {
         }
     }
 
+    public static MySQLContainer<?> getDockerContainer() {
+        return mySQLContainer;
+    }
 }
